@@ -1,3 +1,11 @@
+# **First version** 01/02/2025
+The first version of Gibsembler is out!
+For now, the program is capable of:
+ - Getting your seqeunce file in fasta of genbank format
+ - Divide the seqeunce in the file into segments ~20-25 bp long
+ - While dividing, the program optimizes the division with respect to Tm value of the sequences, GC content of the seqeunces, overlap length.
+ - After the division complited, the user can save the file in scv or excel file formats to read the actual segmnets and their properties.
+ 
 # **Gibsembler**
 <p style = 'text-indent: 40 px;'><div style = 'text-align: center;'><i>This is a program for division of a DNA plasmid into sequences that are optimized for Gibson Assembly.</i></div></p>
 
