@@ -1,3 +1,50 @@
+## How to Use
+
+### 1. Installation & Setup
+
+- Ensure you have **Python 3.8+** installed.
+- Required dependencies (**pandas, openpyxl, biopython**) will be installed automatically when running the script.
+
+### 2. Running the Program
+
+1. **Execute the script** using Python:
+   ```sh
+   python gibsembler.py
+   ```
+2. **Select a DNA sequence file** (FASTA or GenBank format) via the file selection window.
+3. **Choose where to save the output file** (CSV or Excel format).
+4. **Wait for processing to complete** – this may take a few seconds to minutes depending on sequence length.
+5. **Check the saved file** for segmented sequences optimized for Gibson Assembly.
+
+### 3. Output File Format
+
+The output file contains:
+
+- **Segment Sequence**: The segmented DNA sequence.
+- **Length**: Length of the segment.
+- **GC Content (%)**: GC percentage in the segment.
+- **Tm (°C)**: Calculated melting temperature.
+- **Overlap Sequence**: The overlapping sequence for assembly.
+- **Overlap Length**: The length of the overlap region.
+
+---
+
+# Version Update Notes
+
+### Version: 2.0 (Latest Update)
+
+#### Fixes & Enhancements
+
+- **Fixed infinite loop bug** – ensured `i` progresses correctly in circular DNA.
+- **Corrected overlap sequence errors** – overlaps are now strictly capped at 15 bp.
+- **Improved Tm calculation** – switched to nearest-neighbor thermodynamics.
+- **Added progress indicators** – displays real-time progress during segmentation.
+- **Automatic dependency installation** – missing libraries are now installed at runtime.
+- **Better error handling** – detects and reports issues with input files.
+- **Excel formatting fix** – overlap sequences are highlighted properly in output.
+
+---
+
 # **First version** 01/02/2025
 The first version of Gibsembler is out!
 For now, the program is capable of:
